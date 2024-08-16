@@ -1,0 +1,135 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+main {
+  width: 86%;
+  margin: auto;
+}
+@media only screen and (min-width: 993px) {
+  main {
+    width: 79%;
+  }
+}
+
+article {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+figcaption {
+  font-weight: 500;
+}
+
+footer {
+  background-color: black;
+  height: 155px;
+  padding-bottom: 10px;
+  display: flex;
+  padding: 30px;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 576px) {
+  footer {
+    background-color: black;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+button {
+  width: 113px;
+  height: 42.03px;
+  background-color: white;
+  border-radius: 7px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  width: 275px;
+}
+
+.header-container__main {
+  margin-bottom: 116px;
+}
+.header-container__project {
+  padding: 2px;
+}
+
+.section-container {
+  margin-top: 69px;
+}
+.section-container__top {
+  margin-top: 116px;
+}
+.section-container__tech p {
+  padding: 0 25px 0;
+  text-align: center;
+}
+.section-container__bottom {
+  margin-bottom: 81px;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-with-caption {
+  margin: 20px;
+  width: 67px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 993px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 300px;
+    row-gap: 64px;
+  }
+}
+
+.project-card {
+  max-width: 440.44px;
+  margin: 0 auto 64px;
+}
+
+.project-card-subheading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+  margin: 2.61px 0 2.61px;
+}
+
+.project-card-heading {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 45.99px;
+  margin: 0;
+}
+
+.project-img-background {
+  background-color: #E3F6F5;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.project-img {
+  width: 88%;
+  height: 74%;
+}

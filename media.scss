@@ -1,0 +1,27 @@
+@import './devices.scss';
+
+
+@mixin phone {
+    @media only screen and (max-width: $phone-width){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: ($phone-width + 1px )) and ($max-width: $sm-tablet-width){
+        @content;
+    }
+}
+
+@mixin lg-tablet {
+    @media only screen and (min-width: ($sm-tablet-width + 1px)) and ($max-width: $lg-tablet-width){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media only screen and (min-width: ($lg-tablet-width + 1px)){
+        @content;
+    }
+}
+
