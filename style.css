@@ -1,6 +1,12 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
+  margin: 0;
+}
+
+header {
+  width: 86%;
+  margin: auto;
 }
 
 main {
@@ -25,9 +31,8 @@ figcaption {
 footer {
   background-color: black;
   height: 155px;
-  padding-bottom: 10px;
+  padding: 4%;
   display: flex;
-  padding: 30px;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
@@ -43,28 +48,128 @@ footer {
   }
 }
 
-button {
-  width: 113px;
-  height: 42.03px;
-  background-color: white;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 86%;
+  margin: auto;
+  margin-top: 47px;
+}
+@media only screen and (max-width: 576px) {
+  .navbar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+.navbar ul {
+  box-sizing: border-box;
+  max-height: 45px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 40%;
+  font-size: 18px;
+}
+.navbar li {
+  display: inline;
+  margin: 0 15px 0;
+}
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
   border-radius: 7px;
-  text-align: center;
-  font-weight: bold;
+}
+.navbar li a:hover {
+  box-shadow: inset 0 0 0 1px black;
+  transition: all 300ms;
+}
+.navbar__links {
   border: 1px solid black;
-  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
 }
 
 .buttons-container {
   display: flex;
-  justify-content: space-between;
-  width: 275px;
+}
+.buttons-container img {
+  height: 24px;
+  width: 24px;
+}
+.buttons-container span {
+  margin-right: 8px;
+}
+.buttons-container__code-button {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  border: 1px solid black;
+  border-radius: 7px;
+  max-height: 45px;
+  max-width: 139px;
+  display: flex;
+  cursor: pointer;
+  padding: 3%;
+  margin-right: 23px;
+}
+.buttons-container__preview-button {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 7px;
+  max-height: 45px;
+  max-width: 139px;
+  display: flex;
+  cursor: pointer;
+  padding: 3%;
 }
 
 .header-container__main {
   margin-bottom: 116px;
 }
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .header-container__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .header-container__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.header-container__main h1 {
+  text-align: left;
+}
+@media only screen and (max-width: 576px) {
+  .header-container__main--header-img {
+    display: none;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .header-container__main--header-img {
+    display: none;
+  }
+}
+.header-container__main--subheading {
+  font-weight: 500;
+  text-align: left;
+}
 .header-container__project {
   padding: 2px;
+  margin: 0;
 }
 
 .section-container {
@@ -73,12 +178,144 @@ button {
 .section-container__top {
   margin-top: 116px;
 }
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__top {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__top {
+    display: flex;
+  }
+}
+.section-container__top--about-me-img {
+  margin-bottom: 46px;
+  width: 299.9px;
+  height: 412.36px;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__top--about-me-img {
+    width: 488.74px;
+    height: 672.02px;
+    margin-right: 5%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__top--about-me-img {
+    width: 488.74px;
+    height: 672.02px;
+    margin-right: 5%;
+  }
+}
+.section-container__top--phone-head {
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .section-container__top--phone-head {
+    display: block;
+    font-weight: 600;
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .section-container__top--phone-head {
+    display: block;
+    font-weight: 600;
+    font-size: 32px;
+  }
+}
+.section-container__top--laptop-head {
+  display: none;
+  text-align: left;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__top--laptop-head {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+    padding: 3%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__top--laptop-head {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+    padding: 3%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__top--laptop-about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__top--laptop-about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__top article {
+    display: flex;
+    padding: 3%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__top article {
+    display: flex;
+    padding: 3%;
+  }
+}
+.section-container__tech--tech-head {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 41px;
+}
 .section-container__tech p {
   padding: 0 25px 0;
   text-align: center;
 }
 .section-container__bottom {
   margin-bottom: 81px;
+}
+.section-container__bottom--project-head {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 576px) {
+  .about-me-phone {
+    display: block;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .about-me-phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .about-me-phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .about-me-phone {
+    display: none;
+  }
+}
+
+.about-me-laptop {
+  display: block;
+}
+@media only screen and (max-width: 576px) {
+  .about-me-laptop {
+    display: none;
+  }
 }
 
 .logos {

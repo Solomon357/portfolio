@@ -6,6 +6,12 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    margin: 0;
+}
+
+header {
+    width:86%;
+    margin: auto;
 }
 
 main {
@@ -19,6 +25,7 @@ main {
 
 article {
     text-align: left;
+    // vertical-align: middle;
     margin-bottom: 10px;
 }
 
@@ -27,12 +34,10 @@ figcaption {
 }
 
 footer{
-    //deal with footer sizing later
     background-color: black;
     height: 155px;
-    padding-bottom: 10px;
+    padding: 4%;
     display: flex;
-    padding:30px;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
@@ -52,39 +57,145 @@ footer{
 //     margin-bottom: 15px;
 // }
 
-button {
-    width: 113px;
-    height: 42.03px;
-    background-color: white;
-    border-radius: 7px;
-    text-align: center;
-    font-weight: bold;
-    border: 1px solid black;
-    cursor: pointer;
-}
+
 
 // CSS REFERENCING CLASS OF ELEMENT
 
-.buttons-container {
+.navbar{
+
     display: flex;
     justify-content: space-between;
-    width: 275px;
+    width: 86%;
+    margin: auto;
+    margin-top: 47px;
+
+    @include media.phone {
+        display: none;
+    }
+
+    @include media.tablet {
+        display: none;
+    }
+
+    ul{
+        // border: 1px solid black;
+        box-sizing: border-box;
+        max-height:45px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 40%; 
+        font-size: 18px;
+    }
+
+    li {
+        display: inline;
+        margin: 0 15px 0;
+
+        a {
+            text-decoration: none;
+            color: black;
+            padding:10px;
+            border-radius: 7px;
+        }
+
+        a:hover {
+            box-shadow: inset 0 0 0 1px black;
+            transition: all 300ms;
+        }
+    }
+
+    &__links{
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
 }
 
-// .code-button {
-//     background: url("https://cdn3.iconfinder.com/data/icons/font-awesome-solid/640/code-64.png") no-repeat right center;
-//     padding-left:20px;
-// }
+.buttons-container {
+    display: flex;
 
+    img {
+        height: 24px;
+        width: 24px;
+    }
+
+    span {
+        margin-right: 8px;
+    }
+
+    &__code-button{
+        text-decoration: none;
+        font-weight:700;
+        font-size: 16px;
+        color: black;
+        border: 1px solid black;
+        border-radius: 7px;
+        max-height: 45px;
+        max-width: 139px;
+        display: flex;
+        cursor: pointer;
+        padding: 3%;
+        margin-right: 23px;
+    }
+
+    &__preview-button{
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-size: 16px;
+        border: 1px solid black;
+        border-radius: 7px;
+        max-height: 45px;
+        max-width: 139px;
+        display: flex;
+        cursor: pointer;
+        padding: 3%;
+    }
+}
 
 .header-container{
 
     &__main{
         margin-bottom: 116px;
+        
+        @include media.lg-tablet {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @include media.laptop {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        h1 {
+            text-align: left;
+        }
+
+        &--header-img {
+
+            @include media.phone {
+                display: none;
+            }
+
+            @include media.tablet {
+                display: none;
+            }
+        }
+
+        &--subheading {
+            font-weight: 500;
+            text-align: left;
+        }
     }
 
     &__project {
         padding: 2px;
+        margin: 0;
     }
 }
 
@@ -93,19 +204,146 @@ button {
     
     &__top {
         margin-top: 116px;
+        @include media.lg-tablet {
+            display: flex;
+        }
+
+        @include media.laptop {
+            display:flex;
+        }
+
+        &--about-me-img {
+            margin-bottom: 46px;
+            width: 299.9px;
+            height: 412.36px;
+
+            @include media.lg-tablet {
+                width: 488.74px;
+                height: 672.02px;
+                margin-right: 5%;
+            }
+    
+            @include media.laptop {
+                width: 488.74px;
+                height: 672.02px;
+                margin-right: 5%;
+            }
+            
+        }
+
+        &--phone-head {
+
+            display: none;
+
+            @include media.phone {
+                display: block;
+                font-weight: 600;
+                font-size: 32px;
+            }
+
+            @include media.tablet {
+                display: block;
+                font-weight: 600;
+                font-size: 32px;
+            }
+        
+        }
+
+        &--laptop-head {
+            display: none;
+            text-align: left;
+
+            @include media.lg-tablet {
+                display: block;
+                font-size: 48px;
+                font-weight: 600;
+                padding: 3%;
+            }
+
+            @include media.laptop {
+                display: block;
+                font-size: 48px;
+                font-weight: 600;
+                padding: 3%;
+            }
+        }
+
+        &--laptop-about-me-container{
+            @include media.lg-tablet {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            @include media.laptop {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        article {
+            @include media.lg-tablet {
+                display: flex;
+                padding: 3%;
+
+            }
+    
+            @include media.laptop {
+                display:flex;
+                padding: 3%;
+            }
+        }
     }
 
     &__tech {
+
+        &--tech-head{
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 41px;
+        }
+
         p {
             padding: 0 25px 0;
             text-align: center; 
-           // width: 484px;  
         }
     }
 
     &__bottom {
         margin-bottom: 81px;
+
+        &--project-head {
+            font-size: 48px;
+            font-weight: 600;
+            margin-bottom: 80px;  
+        }
         
+    }
+}
+
+.about-me-phone{
+
+    @include media.phone {
+        display: block;
+    }
+
+    @include media.tablet {
+        display: none;
+    }
+
+    @include media.lg-tablet {
+        display: none;
+    }
+    @include media.laptop {
+        display: none;
+    }
+}
+
+.about-me-laptop{
+    display: block;
+
+    @include media.phone {
+        display: none;
     }
 }
 
