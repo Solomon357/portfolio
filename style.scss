@@ -3,7 +3,13 @@
 @import './theme.scss';
 @import './mixin.scss';
 
+
+
 // CSS DIRECTLY ACCESSING ELEMENT //
+
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
@@ -248,6 +254,7 @@ footer{
     
     &__aboutme {
         margin-bottom: 81px;
+
         @include media.lg-tablet {
             display: flex;
             flex-direction: row-reverse;
@@ -320,6 +327,7 @@ footer{
                 flex-direction: column;
                 justify-content: center;
             }
+
             @include media.laptop {
                 display: flex;
                 flex-direction: column;
