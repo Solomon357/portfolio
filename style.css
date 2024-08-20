@@ -2,6 +2,8 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   margin: 0;
+  background-color: #27246a;
+  color: rgb(207, 203, 203);
 }
 
 header {
@@ -19,8 +21,13 @@ main {
   }
 }
 
+svg {
+  fill: rgb(208, 135, 1);
+}
+
 figcaption {
   font-weight: 500;
+  font-size: 16px;
 }
 
 footer {
@@ -82,13 +89,14 @@ footer a:hover {
 }
 .navbar li a {
   text-decoration: none;
-  color: black;
-  padding: 10px;
+  padding: 12px;
   border-radius: 7px;
+  color: rgb(207, 203, 203);
 }
 .navbar li a:hover {
-  box-shadow: inset 0 0 0 1px black;
-  transition: all 300ms;
+  color: rgb(208, 135, 1);
+  box-shadow: inset 0 0 0 1px rgb(208, 135, 1);
+  transition: all 400ms;
 }
 .navbar__links {
   border: 1px solid black;
@@ -99,10 +107,12 @@ footer a:hover {
 
 .buttons-container {
   display: flex;
+  color: rgb(207, 203, 203);
 }
-.buttons-container img {
+.buttons-container svg {
   height: 24px;
   width: 24px;
+  fill: rgb(207, 203, 203);
 }
 .buttons-container span {
   margin-right: 8px;
@@ -111,8 +121,7 @@ footer a:hover {
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
-  color: black;
-  border: 1px solid black;
+  color: rgb(207, 203, 203);
   border-radius: 7px;
   max-height: 45px;
   max-width: 139px;
@@ -121,12 +130,15 @@ footer a:hover {
   padding: 3%;
   margin-right: 23px;
 }
+.buttons-container__code-button:hover {
+  box-shadow: inset 0 0 0 1px rgb(207, 203, 203);
+  transition: all 400ms;
+}
 .buttons-container__preview-button {
   text-decoration: none;
-  color: black;
+  color: rgb(207, 203, 203);
   font-weight: 700;
   font-size: 16px;
-  border: 1px solid black;
   border-radius: 7px;
   max-height: 45px;
   max-width: 139px;
@@ -134,9 +146,13 @@ footer a:hover {
   cursor: pointer;
   padding: 3%;
 }
+.buttons-container__preview-button:hover {
+  box-shadow: inset 0 0 0 1px rgb(207, 203, 203);
+  transition: all 400ms;
+}
 
 .underline-style {
-  box-shadow: inset 0 -0.4em 0 0 bisque;
+  box-shadow: inset 0 -0.4em 0 0 rgb(208, 135, 1);
 }
 
 .header-container__main {
@@ -181,61 +197,61 @@ footer a:hover {
 .section-container {
   margin-top: 69px;
 }
-.section-container__top {
+.section-container__aboutme {
   margin-top: 116px;
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .section-container__top {
+  .section-container__aboutme {
     display: flex;
   }
 }
 @media only screen and (min-width: 993px) {
-  .section-container__top {
+  .section-container__aboutme {
     display: flex;
   }
 }
-.section-container__top--about-me-img {
+.section-container__aboutme--profile-img {
   margin-bottom: 46px;
   width: 299.9px;
   height: 412.36px;
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .section-container__top--about-me-img {
+  .section-container__aboutme--profile-img {
     width: 488.74px;
     height: 672.02px;
     margin-right: 5%;
   }
 }
 @media only screen and (min-width: 993px) {
-  .section-container__top--about-me-img {
+  .section-container__aboutme--profile-img {
     width: 488.74px;
     height: 672.02px;
     margin-right: 5%;
   }
 }
-.section-container__top--phone-head {
+.section-container__aboutme--phone-head {
   display: none;
 }
 @media only screen and (max-width: 576px) {
-  .section-container__top--phone-head {
+  .section-container__aboutme--phone-head {
     display: block;
     font-weight: 600;
     font-size: 32px;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .section-container__top--phone-head {
+  .section-container__aboutme--phone-head {
     display: block;
     font-weight: 600;
     font-size: 32px;
   }
 }
-.section-container__top--laptop-head {
+.section-container__aboutme--laptop-head {
   display: none;
   text-align: left;
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .section-container__top--laptop-head {
+  .section-container__aboutme--laptop-head {
     display: block;
     font-size: 48px;
     font-weight: 600;
@@ -243,7 +259,7 @@ footer a:hover {
   }
 }
 @media only screen and (min-width: 993px) {
-  .section-container__top--laptop-head {
+  .section-container__aboutme--laptop-head {
     display: block;
     font-size: 48px;
     font-weight: 600;
@@ -251,28 +267,28 @@ footer a:hover {
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .section-container__top--laptop-about-me-container {
+  .section-container__aboutme--laptop-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 }
 @media only screen and (min-width: 993px) {
-  .section-container__top--laptop-about-me-container {
+  .section-container__aboutme--laptop-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .section-container__top article {
+  .section-container__aboutme article {
     padding: 3%;
     text-align: left;
   }
 }
 @media only screen and (min-width: 993px) {
-  .section-container__top article {
-    padding: 2%;
+  .section-container__aboutme article {
+    padding: 3%;
     text-align: left;
   }
 }
@@ -366,7 +382,7 @@ footer a:hover {
 }
 
 .project-img-background {
-  background-color: bisque;
+  background-color: rgb(208, 135, 1);
   height: 300px;
   display: flex;
   justify-content: center;

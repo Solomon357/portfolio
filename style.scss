@@ -1,5 +1,6 @@
 @use './media.scss';
 @use './devices.scss';
+@import './theme.scss';
 
 
 // CSS DIRECTLY ACCESSING ELEMENT //
@@ -7,6 +8,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     margin: 0;
+    background-color: $purple-theme;
+    color: $text-theme;
 }
 
 header {
@@ -29,8 +32,13 @@ main {
 //     margin-bottom: 10px;
 // }
 
+svg {
+    fill: $orange-theme;
+}
+
 figcaption {
     font-weight: 500;
+    font-size: $caption-size;
 }
 
 footer{
@@ -92,23 +100,25 @@ footer{
         justify-content: space-between;
         flex-wrap: wrap;
         width: 40%; 
-        font-size: 18px;
+        font-size: $text-size;
     }
 
     li {
         display: inline;
         margin: 0 15px 0;
+        
 
         a {
             text-decoration: none;
-            color: black;
-            padding:10px;
+            padding:12px;
             border-radius: 7px;
+            color: $text-theme;
         }
 
         a:hover {
-            box-shadow: inset 0 0 0 1px black;
-            transition: all 300ms;
+            color: $orange-theme;
+            box-shadow: inset 0 0 0 1px $orange-theme;
+            transition: all 400ms;
         }
     }
 
@@ -122,10 +132,12 @@ footer{
 
 .buttons-container {
     display: flex;
+    color: $text-theme;
 
-    img {
+    svg {
         height: 24px;
         width: 24px;
+        fill: $text-theme;
     }
 
     span {
@@ -136,8 +148,8 @@ footer{
         text-decoration: none;
         font-weight:700;
         font-size: 16px;
-        color: black;
-        border: 1px solid black;
+        color: $text-theme;
+        //border: 1px solid $text-theme;
         border-radius: 7px;
         max-height: 45px;
         max-width: 139px;
@@ -147,12 +159,17 @@ footer{
         margin-right: 23px;
     }
 
+    &__code-button:hover {
+        box-shadow: inset 0 0 0 1px $text-theme;
+        transition: all 400ms; 
+    }
+
     &__preview-button{
         text-decoration: none;
-        color: black;
+        color: $text-theme;
+        //border: 1px solid $text-theme; 
         font-weight: 700;
         font-size: 16px;
-        border: 1px solid black;
         border-radius: 7px;
         max-height: 45px;
         max-width: 139px;
@@ -160,10 +177,16 @@ footer{
         cursor: pointer;
         padding: 3%;
     }
+
+    &__preview-button:hover {
+        box-shadow: inset 0 0 0 1px $text-theme;
+        transition: all 400ms; 
+    }
+
 }
 
 .underline-style{
-    box-shadow: inset 0 -0.4em 0 0 bisque;
+    box-shadow: inset 0 -0.4em 0 0 rgb(208, 135, 1);
 }
 .header-container{
 
@@ -212,7 +235,7 @@ footer{
 .section-container {
     margin-top: 69px;
     
-    &__top {
+    &__aboutme {
         margin-top: 116px;
         @include media.lg-tablet {
             display: flex;
@@ -222,7 +245,7 @@ footer{
             display:flex;
         }
 
-        &--about-me-img {
+        &--profile-img {
             margin-bottom: 46px;
             width: 299.9px;
             height: 412.36px;
@@ -278,7 +301,7 @@ footer{
             }
         }
 
-        &--laptop-about-me-container{
+        &--laptop-container{
             @include media.lg-tablet {
                 display: flex;
                 flex-direction: column;
@@ -293,15 +316,13 @@ footer{
 
         article {
             @include media.lg-tablet {
-                // display: flex;
                 padding: 3%;
                 text-align: left;
 
             }
     
             @include media.laptop {
-                // display:flex;
-                padding: 2%;
+                padding: 3%;
                 text-align: left;
             }
         }
@@ -402,7 +423,7 @@ footer{
 }
 
 .project-img-background {
-    background-color: bisque;
+    background-color: $orange-theme;
     height: 300px;
     display: flex;
     justify-content: center;
