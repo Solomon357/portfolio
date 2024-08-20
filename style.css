@@ -1,18 +1,471 @@
-/* Error: Undefined variable.
- *    ,
- * 11 |     @media only screen and (min-width: ($phone-width + 1px )) and ($max-width: $sm-tablet-width){
- *    |                                                                    ^^^^^^^^^^
- *    '
- *   media.scss 11:68  tablet()
- *   style.scss 88:5   root stylesheet */
+html {
+  scroll-behavior: smooth;
+}
 
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0;
+  background-color: #27246a;
+  color: rgb(207, 203, 203);
+}
+
+header {
+  width: 86%;
+  margin: auto;
+}
+
+main {
+  width: 86%;
+  margin: auto;
+}
+@media only screen and (min-width: 993px) {
+  main {
+    width: 79%;
+  }
+}
+
+svg {
+  fill: rgb(208, 135, 1);
+}
+
+figcaption {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+footer {
+  background-color: black;
+  height: 155px;
+  padding: 4%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+footer a {
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+  transform: all 400ms;
+}
+@media only screen and (max-width: 576px) {
+  footer {
+    background-color: black;
+    height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #27246a;
+  display: flex;
+  justify-content: space-between;
+  width: 86%;
+  margin: auto;
+  margin-top: 47px;
+}
+@media only screen and (max-width: 576px) {
+  .navbar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+  row-gap: 10px;
+  font-size: 18px;
+}
+.navbar li {
+  display: inline;
+  margin: 0 15px 0;
+}
+.navbar li a {
+  text-decoration: none;
+  padding: 12px;
+  margin: 6px;
+  border-radius: 7px;
+  color: rgb(207, 203, 203);
+}
+.navbar li a:hover {
+  color: rgb(208, 135, 1);
+  box-shadow: inset 0 -1px 0 0 rgb(208, 135, 1);
+  transition: all 400ms;
+}
+.navbar__links {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.buttons-container {
+  display: flex;
+  color: rgb(207, 203, 203);
+}
+.buttons-container svg {
+  height: 24px;
+  width: 24px;
+  fill: rgb(207, 203, 203);
+}
+.buttons-container span {
+  margin-right: 8px;
+}
+.buttons-container__code-button {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(207, 203, 203);
+  border-radius: 7px;
+  max-height: 45px;
+  max-width: 139px;
+  display: flex;
+  cursor: pointer;
+  padding: 3%;
+  margin-right: 23px;
+}
+.buttons-container__code-button:hover {
+  box-shadow: inset 0 0 0 1px rgb(207, 203, 203);
+  transition: all 400ms;
+}
+.buttons-container__preview-button {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: rgb(207, 203, 203);
+  border-radius: 7px;
+  max-height: 45px;
+  max-width: 139px;
+  display: flex;
+  cursor: pointer;
+  padding: 3%;
+  margin-right: 23px;
+}
+.buttons-container__preview-button:hover {
+  box-shadow: inset 0 0 0 1px rgb(207, 203, 203);
+  transition: all 400ms;
+}
+
+.underline-style {
+  box-shadow: inset 0 -0.4em 0 0 rgb(208, 135, 1);
+}
+
+.header-container__main {
+  margin-bottom: 116px;
+  height: 500px;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .header-container__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .header-container__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.header-container__main--title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header-container__main h1 {
+  font-size: 64px;
+  margin-bottom: 5%;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .header-container__main h1 {
+    font-size: 80px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .header-container__main h1 {
+    font-size: 80px;
+  }
+}
+.header-container__main a {
+  display: inline-block;
+  border: 3px solid rgb(207, 203, 203);
+  box-shadow: 3px 4px 0 1px rgb(207, 203, 203);
+  background-color: rgb(208, 135, 1);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+  color: rgb(207, 203, 203);
+  border-radius: 7px;
+  max-height: 78px;
+  max-width: 321px;
+  display: flex;
+  cursor: pointer;
+  padding: 3%;
+  margin-right: 23px;
+}
+.header-container__main a svg {
+  margin-left: 8px;
+  margin-top: 4px;
+  fill: none;
+}
+.header-container__main a:hover {
+  transform: scale(1.05);
+  transition: all 400ms;
+}
+@media only screen and (max-width: 576px) {
+  .header-container__main--header-img {
+    display: none;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .header-container__main--header-img {
+    display: none;
+  }
+}
+.header-container__main--subheading {
+  color: rgb(154, 153, 153);
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .header-container__main--subheading {
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .header-container__main--subheading {
+    font-size: 32px;
+  }
+}
+.header-container__project {
+  padding: 2px;
+  margin: 0;
+}
+
+.section-container {
+  margin-top: 69px;
+}
+.section-container__aboutme {
+  margin-bottom: 81px;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__aboutme {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__aboutme {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+.section-container__aboutme--profile-img {
+  margin-bottom: 46px;
+  width: 299.9px;
+  height: 412.36px;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__aboutme--profile-img {
+    width: 488.74px;
+    height: 672.02px;
+    margin-right: 5%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__aboutme--profile-img {
+    width: 488.74px;
+    height: 672.02px;
+    margin-right: 5%;
+  }
+}
+.section-container__aboutme--phone-head {
+  display: none;
+}
+@media only screen and (max-width: 576px) {
+  .section-container__aboutme--phone-head {
+    display: block;
+    font-weight: 600;
+    font-size: 32px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .section-container__aboutme--phone-head {
+    display: block;
+    font-weight: 600;
+    font-size: 32px;
+  }
+}
+.section-container__aboutme--laptop-head {
+  display: none;
+  text-align: left;
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__aboutme--laptop-head {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+    padding: 3%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__aboutme--laptop-head {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+    padding: 3%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__aboutme--laptop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__aboutme--laptop-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__aboutme article {
+    padding: 3%;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__aboutme article {
+    padding: 3%;
+    text-align: left;
+  }
+}
+.section-container__tech--tech-head {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 41px;
+}
+.section-container__tech p {
+  padding: 0 25px 0;
+  text-align: center;
+}
+.section-container__bottom {
+  margin-bottom: 81px;
+}
+.section-container__bottom--project-head {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 576px) {
+  .about-me-phone {
+    display: block;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .about-me-phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .about-me-phone {
+    display: none;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .about-me-phone {
+    display: none;
+  }
+}
+
+.about-me-laptop {
   display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 11 \2502      @media only screen and (min-width: ($phone-width + 1px )) and ($max-width: $sm-tablet-width){\d\a    \2502                                                                     ^^^^^^^^^^\a    \2575 \a   media.scss 11:68  tablet()\a   style.scss 88:5   root stylesheet";
+}
+@media only screen and (max-width: 576px) {
+  .about-me-laptop {
+    display: none;
+  }
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tech-with-caption {
+  margin: 20px;
+  width: 67px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 993px) {
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 300px;
+    row-gap: 64px;
+  }
+}
+
+.project-card {
+  max-width: 440.44px;
+  margin: 0 auto 64px;
+  text-align: left;
+}
+
+.project-card-subheading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.36px;
+  margin: 2.61px 0 2.61px;
+}
+
+.project-card-heading {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 45.99px;
+  margin: 0;
+}
+
+.project-img-background {
+  background-color: rgb(208, 135, 1);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.project-img {
+  width: 88%;
+  height: 74%;
+}
+
+@media only screen and (max-width: 576px) {
+  .icon-container {
+    margin-bottom: 32px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .icon-container {
+    margin-bottom: 32px;
+  }
 }
