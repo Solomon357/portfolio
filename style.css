@@ -6,8 +6,14 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   margin: 0;
-  background-color: #27246a;
-  color: rgb(207, 203, 203);
+  background-color: #293241;
+  color: white;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 header {
@@ -16,17 +22,11 @@ header {
 }
 
 main {
-  width: 86%;
   margin: auto;
-}
-@media only screen and (min-width: 993px) {
-  main {
-    width: 79%;
-  }
 }
 
 svg {
-  fill: rgb(208, 135, 1);
+  fill: #293241;
 }
 
 figcaption {
@@ -34,17 +34,21 @@ figcaption {
   font-size: 16px;
 }
 
+p {
+  font-size: 18px;
+  margin: 2%;
+}
+
 footer {
   background-color: black;
+  color: white;
+  font-size: 18px;
   height: 155px;
-  padding: 4%;
+  padding: 1% 4%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-}
-footer a {
-  text-decoration: none;
 }
 footer a:hover {
   text-decoration: underline;
@@ -61,15 +65,50 @@ footer a:hover {
   }
 }
 
+.orange {
+  background: #ee6c4d;
+}
+
+.blue {
+  background: #3d5a80;
+}
+
+.purple {
+  background: #302b8f;
+}
+
+.spacer {
+  aspect-ratio: 960/150;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layered-waves {
+  background-image: url("./images/layered-waves.svg");
+}
+
+.single-wave {
+  background-image: url("./images/single-wave.svg");
+}
+
+.single-wave-2 {
+  background-image: url("./images/single-wave-2.svg");
+}
+
 .navbar {
   position: sticky;
-  top: 0;
-  background-color: #27246a;
+  top: 10px;
+  background-color: #293241;
   display: flex;
   justify-content: space-between;
-  width: 86%;
+  width: 95%;
+  border-radius: 50px;
   margin: auto;
-  margin-top: 47px;
+  margin-top: 27px;
+  padding: 0 2%;
+  box-shadow: 0 4px 40px #293241;
 }
 @media only screen and (max-width: 576px) {
   .navbar {
@@ -81,29 +120,33 @@ footer a:hover {
     display: none;
   }
 }
+.navbar h2 {
+  font-size: 2em;
+}
 .navbar ul {
   display: flex;
   justify-content: space-between;
+  align-content: center;
   flex-wrap: wrap;
-  width: 50%;
+  width: 40%;
   row-gap: 10px;
   font-size: 18px;
 }
 .navbar li {
   display: inline;
-  margin: 0 15px 0;
+  margin: 5px;
 }
 .navbar li a {
   text-decoration: none;
   padding: 12px;
   margin: 6px;
   border-radius: 7px;
-  color: rgb(207, 203, 203);
+  color: white;
+  transition: all 400ms ease-in-out;
 }
 .navbar li a:hover {
-  color: rgb(208, 135, 1);
-  box-shadow: inset 0 -1px 0 0 rgb(208, 135, 1);
-  transition: all 400ms;
+  color: #ee6c4d;
+  box-shadow: inset 0 -1px 0 0 #ee6c4d;
 }
 .navbar__links {
   border: 1px solid black;
@@ -114,12 +157,13 @@ footer a:hover {
 
 .buttons-container {
   display: flex;
-  color: rgb(207, 203, 203);
+  color: white;
+  padding-bottom: 3%;
 }
 .buttons-container svg {
   height: 24px;
   width: 24px;
-  fill: rgb(207, 203, 203);
+  fill: white;
 }
 .buttons-container span {
   margin-right: 8px;
@@ -128,7 +172,7 @@ footer a:hover {
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
-  color: rgb(207, 203, 203);
+  color: white;
   border-radius: 7px;
   max-height: 45px;
   max-width: 139px;
@@ -136,16 +180,16 @@ footer a:hover {
   cursor: pointer;
   padding: 3%;
   margin-right: 23px;
+  transition: all 400ms ease-in-out;
 }
 .buttons-container__code-button:hover {
-  box-shadow: inset 0 0 0 1px rgb(207, 203, 203);
-  transition: all 400ms;
+  box-shadow: inset 0 0 0 1px white;
 }
 .buttons-container__preview-button {
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
-  color: rgb(207, 203, 203);
+  color: white;
   border-radius: 7px;
   max-height: 45px;
   max-width: 139px;
@@ -153,18 +197,22 @@ footer a:hover {
   cursor: pointer;
   padding: 3%;
   margin-right: 23px;
+  transition: all 400ms ease-in-out;
 }
 .buttons-container__preview-button:hover {
-  box-shadow: inset 0 0 0 1px rgb(207, 203, 203);
-  transition: all 400ms;
+  box-shadow: inset 0 0 0 1px white;
 }
 
 .underline-style {
-  box-shadow: inset 0 -0.4em 0 0 rgb(208, 135, 1);
+  box-shadow: inset 0 -0.4em 0 0 #ee6c4d;
+}
+
+.underline-style-inverse {
+  box-shadow: inset 0 -0.4em 0 0 #293241;
 }
 
 .header-container__main {
-  margin-bottom: 116px;
+  margin-bottom: 40px;
   height: 500px;
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -202,13 +250,13 @@ footer a:hover {
 }
 .header-container__main a {
   display: inline-block;
-  border: 3px solid rgb(207, 203, 203);
-  box-shadow: 3px 4px 0 1px rgb(207, 203, 203);
-  background-color: rgb(208, 135, 1);
+  border: 3px solid white;
+  box-shadow: 3px 4px 0 1px white;
+  background-color: #ee6c4d;
   text-decoration: none;
   font-weight: 700;
   font-size: 20px;
-  color: rgb(207, 203, 203);
+  color: white;
   border-radius: 7px;
   max-height: 78px;
   max-width: 321px;
@@ -237,7 +285,7 @@ footer a:hover {
   }
 }
 .header-container__main--subheading {
-  color: rgb(154, 153, 153);
+  color: rgb(205, 203, 203);
   font-size: 20px;
   font-weight: 500;
   margin: 0;
@@ -258,15 +306,14 @@ footer a:hover {
 }
 
 .section-container {
-  margin-top: 69px;
+  padding-top: 40px;
 }
 .section-container__aboutme {
-  margin-bottom: 81px;
+  padding: 80px 5%;
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
-  .section-container__aboutme {
-    display: flex;
-    flex-direction: row-reverse;
+  .section-container__aboutme p {
+    font-size: 24px;
   }
 }
 @media only screen and (min-width: 993px) {
@@ -274,9 +321,12 @@ footer a:hover {
     display: flex;
     flex-direction: row-reverse;
   }
+  .section-container__aboutme p {
+    font-size: 24px;
+  }
 }
 .section-container__aboutme--profile-img {
-  margin-bottom: 46px;
+  padding-bottom: 46px;
   width: 299.9px;
   height: 412.36px;
 }
@@ -284,14 +334,13 @@ footer a:hover {
   .section-container__aboutme--profile-img {
     width: 488.74px;
     height: 672.02px;
-    margin-right: 5%;
+    padding-bottom: 46px;
   }
 }
 @media only screen and (min-width: 993px) {
   .section-container__aboutme--profile-img {
     width: 488.74px;
     height: 672.02px;
-    margin-right: 5%;
   }
 }
 .section-container__aboutme--phone-head {
@@ -311,21 +360,20 @@ footer a:hover {
     font-size: 32px;
   }
 }
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__aboutme--phone-head {
+    display: block;
+    font-size: 48px;
+    font-weight: 600;
+  }
+}
 .section-container__aboutme--laptop-head {
   display: none;
-  text-align: left;
-}
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .section-container__aboutme--laptop-head {
-    display: block;
-    font-size: 48px;
-    font-weight: 600;
-    padding: 3%;
-  }
 }
 @media only screen and (min-width: 993px) {
   .section-container__aboutme--laptop-head {
     display: block;
+    text-align: left;
     font-size: 48px;
     font-weight: 600;
     padding: 3%;
@@ -345,17 +393,14 @@ footer a:hover {
     justify-content: center;
   }
 }
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-  .section-container__aboutme article {
-    padding: 3%;
-    text-align: left;
-  }
-}
 @media only screen and (min-width: 993px) {
   .section-container__aboutme article {
     padding: 3%;
     text-align: left;
   }
+}
+.section-container__tech {
+  padding: 3% 0;
 }
 .section-container__tech--tech-head {
   font-size: 48px;
@@ -363,16 +408,30 @@ footer a:hover {
   margin-bottom: 41px;
 }
 .section-container__tech p {
-  padding: 0 25px 0;
+  padding: 0 4%;
   text-align: center;
 }
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .section-container__tech p {
+    font-size: 24px;
+    padding: 0 8%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .section-container__tech p {
+    font-size: 24px;
+    padding: 0 8%;
+  }
+}
 .section-container__bottom {
-  margin-bottom: 81px;
+  padding-top: 80px;
 }
 .section-container__bottom--project-head {
   font-size: 48px;
   font-weight: 600;
   margin-bottom: 80px;
+  margin-top: 0;
+  padding-top: 40px;
 }
 
 @media only screen and (max-width: 576px) {
@@ -428,7 +487,11 @@ footer a:hover {
 
 .project-card {
   max-width: 440.44px;
-  margin: 0 auto 64px;
+  margin: 3% auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px black inset;
+  background-color: #293241;
+  padding: 2%;
   text-align: left;
 }
 
@@ -447,7 +510,7 @@ footer a:hover {
 }
 
 .project-img-background {
-  background-color: rgb(208, 135, 1);
+  background-color: #ee6c4d;
   height: 300px;
   display: flex;
   justify-content: center;
@@ -455,8 +518,8 @@ footer a:hover {
 }
 
 .project-img {
-  width: 88%;
-  height: 74%;
+  width: 100%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 576px) {
