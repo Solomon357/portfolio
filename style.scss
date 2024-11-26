@@ -8,11 +8,9 @@
 // CSS DIRECTLY ACCESSING ELEMENT //
 
 //TODO: 1.Add more mixins for cleaner code
-//      2. adjust responsiveness between lg-tablet and tablet
-//      3. add darker background to header container
-//      4. fix navbar and add hamburger for phone screens
-//      5. add color styling on my surname
-//      6. add a light mode and a dark mode 
+//      2. add hamburger for phone screens
+//      3. add color styling on my surname
+//      4. add a light mode and a dark mode 
 
 html{
     scroll-behavior: smooth;
@@ -238,7 +236,7 @@ footer{
 .header-container{
 
     &__main{
-        margin-bottom: 40px;
+        margin-bottom: 80px;
         height: 500px; //change to be responsive later
         
         @include media.lg-tablet {
@@ -364,14 +362,14 @@ footer{
 
             @include media.phone {
                 display: block;
+                font-size: 48px;
                 font-weight: 600;
-                font-size: 32px;
             }
 
             @include media.tablet {
                 display: block;
+                font-size: 48px;
                 font-weight: 600;
-                font-size: 32px;
             }
 
             @include media.lg-tablet {
@@ -444,6 +442,7 @@ footer{
 
     &__bottom {
         padding-top: 80px;
+        padding-bottom: 10px;
 
         &--project-head {
             font-size: 48px;

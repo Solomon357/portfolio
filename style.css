@@ -212,7 +212,7 @@ footer a:hover {
 }
 
 .header-container__main {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   height: 500px;
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -349,15 +349,15 @@ footer a:hover {
 @media only screen and (max-width: 576px) {
   .section-container__aboutme--phone-head {
     display: block;
+    font-size: 48px;
     font-weight: 600;
-    font-size: 32px;
   }
 }
 @media only screen and (min-width: 577px) and (max-width: 768px) {
   .section-container__aboutme--phone-head {
     display: block;
+    font-size: 48px;
     font-weight: 600;
-    font-size: 32px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 992px) {
@@ -425,6 +425,7 @@ footer a:hover {
 }
 .section-container__bottom {
   padding-top: 80px;
+  padding-bottom: 10px;
 }
 .section-container__bottom--project-head {
   font-size: 48px;
