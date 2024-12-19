@@ -3,10 +3,6 @@
 @import './theme.scss';
 @import './mixin.scss';
 
-
-
-// CSS DIRECTLY ACCESSING ELEMENT //
-
 //TODO: 1.Add more mixins for cleaner code
 //      2. add hamburger for phone screens
 //      3. add color styling on my surname
@@ -36,14 +32,7 @@ header {
 }
 
 main {
-
-    // width:86%;
-    // padding:0 14%;
     margin: auto;
-
-    // @include media.laptop {
-    //     width:79%;
-    // }
 }
 
 svg {
@@ -71,9 +60,6 @@ footer{
     justify-content: space-between;
     align-items: center;
 
-    // a {
-    //     text-decoration: none;
-    // }
     a:hover{
         text-decoration: underline;
         transform: all 400ms;
@@ -122,9 +108,8 @@ footer{
 .single-wave-2 {
     background-image: url('./images/single-wave-2.svg');
 }
+
 // CSS REFERENCING CLASS OF ELEMENT
-
-
 
 .navbar{
     position:sticky;
@@ -265,10 +250,10 @@ footer{
         }
 
         a {
-            display: inline-block;
             border: 3px solid $text-theme;
             box-shadow: 3px 4px 0 1px $text-theme;
             background-color: $orange-theme;
+            transition: all 400ms ease-in-out;
             @include buttons(321px, 78px, $text-theme, 20px);
 
             svg {
@@ -280,7 +265,6 @@ footer{
 
         a:hover{
             transform: scale(1.05);
-            transition: all 400ms;
         }
 
         &--header-img {
@@ -345,13 +329,11 @@ footer{
                 width: 488.74px;
                 height: 672.02px;
                 padding-bottom: 46px;
-                // margin-right: 5%;
             }
     
             @include media.laptop {
                 width: 488.74px;
                 height: 672.02px;
-                // margin-right: 5%;
             }
             
         }

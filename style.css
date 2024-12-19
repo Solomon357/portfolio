@@ -249,10 +249,10 @@ footer a:hover {
   }
 }
 .header-container__main a {
-  display: inline-block;
   border: 3px solid white;
   box-shadow: 3px 4px 0 1px white;
   background-color: #ee6c4d;
+  transition: all 400ms ease-in-out;
   text-decoration: none;
   font-weight: 700;
   font-size: 20px;
@@ -272,7 +272,6 @@ footer a:hover {
 }
 .header-container__main a:hover {
   transform: scale(1.05);
-  transition: all 400ms;
 }
 @media only screen and (max-width: 576px) {
   .header-container__main--header-img {
