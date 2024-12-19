@@ -508,11 +508,14 @@ footer{
     max-width: 440.44px;
     margin: 3% auto;
     border-radius: 5px;
-    // border:3px solid rgba(50, 50, 93, 0.25);
     box-shadow: 0 0 10px black inset;
     background-color: $navy-theme;
     padding:2%;
     text-align: left;
+
+    @include media.phone{
+        margin: 3%;
+    }
 }
 
 .project-card-subheading {
